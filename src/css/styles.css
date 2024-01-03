@@ -38,4 +38,23 @@ textarea {
 }
 
 .feedback-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.email, .message {
+  display: flex;
+  flex-direction: column;
+}
+
+.email {
+margin-bottom: 10px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
