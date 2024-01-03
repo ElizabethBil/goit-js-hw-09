@@ -1,10 +1,2 @@
-import"./assets/styles-a5059763.js";const e=document.createElement("form");e.className="feedback-form";e.autocomplete="off";e.innerHTML=`<label>
-    Email
-    <input type="email" name="email" autofocus />
-  </label>
-  <label>
-    Message
-    <textarea name="message" rows="8"></textarea>
-  </label>
-  <button type="submit">Submit</button>`;document.body.appendChild(e);const r="feedback-form-state",o=e.querySelector("input"),n=e.querySelector("textarea");let a=JSON.parse(localStorage.getItem(r))||{};function m({email:t,message:l}){o.value=t||"",n.value=l||""}a?m(a):a={email:"",message:""};e.addEventListener("input",t=>{const l=t.target.name,s=t.target.value;a[l]=s,localStorage.setItem("feedback-form-state",JSON.stringify(a))});e.addEventListener("submit",t=>{t.preventDefault(),o.value&&n.value?(localStorage.removeItem("feedback-form-state"),o.value="",n.value="",console.log(a)):alert("All fields should be filled in")});
+import"./assets/styles-2738f5ea.js";const s="feedback-form-state",l=form.querySelector("input"),o=form.querySelector("textarea");let t=JSON.parse(localStorage.getItem(s))||{};function n({email:e,message:a}){l.value=e||"",o.value=a||""}t?n(t):t={email:"",message:""};form.addEventListener("input",e=>{const a=e.target.name,r=e.target.value;t[a]=r,localStorage.setItem("feedback-form-state",JSON.stringify(t))});form.addEventListener("submit",e=>{e.preventDefault(),l.value.trim()&&o.value.trim()?(localStorage.removeItem("feedback-form-state"),l.value="",o.value="",console.log(t)):alert("All fields should be filled in")});
 //# sourceMappingURL=commonHelpers2.js.map
