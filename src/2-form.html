@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2-form</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <form class="feedback-form" autocomplete="off">
@@ -14,12 +20,18 @@
           type="email"
           name="email"
           placeholder="your_email@gmail.com"
+          class="input"
           autofocus
         />
       </label>
       <label class="message">
         Message
-        <textarea name="message" rows="8" placeholder="Text"></textarea>
+        <textarea
+          name="message"
+          rows="8"
+          placeholder="Type area"
+          class="input"
+        ></textarea>
       </label>
       <button type="submit" class="btn">Submit</button>
     </form>
