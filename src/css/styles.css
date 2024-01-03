@@ -8,7 +8,7 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #fffbfb;
   color: #212121;
   line-height: 1.5;
 }
@@ -40,9 +40,12 @@ textarea {
 .feedback-form {
   display: flex;
   flex-direction: column;
-  margin: 24px;
-  align-items: flex-start;
+  margin: auto;
+  padding: 24px;
+  align-items: center;
   gap: 16px;
+  background: #ffe8e8;
+  border-radius: 8px;
 }
 
 .email, .message {
@@ -76,7 +79,6 @@ display: flex;
     line-height: 1.5;
     letter-spacing: 0.64px;
     border-radius: 4px;
-      border: 1px solid #000;
 }
 
 .input::placeholder {
@@ -93,7 +95,7 @@ display: flex;
     height: 80px;
 }
 
-.btn {
+/* .btn {
   background-color: #4E75FF;
   border: none;
   padding: 8px 16px;
@@ -101,7 +103,6 @@ display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-      background: #4E75FF;
       color: #FFF;
         font-family: Montserrat;
         font-size: 16px;
@@ -113,4 +114,28 @@ display: flex;
 
 .btn:hover {
   background: #6C8CFF;
+} */
+
+
+
+
+.btn {
+  background-color: #ff8181;
+  border: none;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+}
+
+.btn:hover {
+  background: #ff9f9f;
 }
