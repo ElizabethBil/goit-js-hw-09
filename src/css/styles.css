@@ -68,6 +68,15 @@ display: flex;
   border-radius: 4px;
     border: 1px solid #808080;
     padding: 8px 0 8px 16px;
+  color: #2E2F42;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    border-radius: 4px;
+      border: 1px solid #000;
 }
 
 .input::placeholder {
@@ -78,17 +87,6 @@ display: flex;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.64px;
-}
-.input:focus {
-  color: #2E2F42;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.64px;
-    border-radius: 4px;
-      border: 1px solid #000;
 }
 
 .input-message {
