@@ -15,8 +15,8 @@
 
 const STORAGE_KEY = 'feedback-form-state';
 
-const input = form.querySelector('input');
-const textarea = form.querySelector('textarea');
+const input = document.querySelector('input');
+const textarea = document.querySelector('textarea');
 
 let object = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 
