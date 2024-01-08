@@ -55,7 +55,6 @@ form.addEventListener('submit', (e) => {
     input.value = '';
     textarea.value = '';
 
-    // Виведення даних (за необхідності)
     console.log(object);
   } else {
     alert('All fields should be filled in');
