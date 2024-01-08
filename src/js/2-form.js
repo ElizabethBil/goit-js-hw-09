@@ -15,6 +15,7 @@
 
 const STORAGE_KEY = 'feedback-form-state';
 
+const form = document.querySelector('form');
 const input = document.querySelector('input');
 const textarea = document.querySelector('textarea');
 
@@ -25,26 +26,39 @@ function setValue({ email, message }) {
   textarea.value = message || '';
 }
 
-!object ? (object = { email: '', message: '' }) : setValue(object);
+// Перевірка, чи є значення в localStorage
+try {
+  object = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+} catch (error) {
+  console.error('Error parsing localStorage:', error);
+  object = {};
+}
 
-form.addEventListener('input', e => {
+// Читання даних з локального сховища при завантаженні сторінки
+setValue(object);
+
+form.addEventListener('input', (e) => {
   const element = e.target.name;
   const value = e.target.value;
   object[element] = value;
 
-  localStorage.setItem('feedback-form-state', JSON.stringify(object));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(object));
 });
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   if (input.value.trim() && textarea.value.trim()) {
-    localStorage.removeItem('feedback-form-state');
+    // Видалення даних з локального сховища
+    localStorage.removeItem(STORAGE_KEY);
+
     input.value = '';
     textarea.value = '';
 
+    // Виведення даних (за необхідності)
     console.log(object);
   } else {
     alert('All fields should be filled in');
   }
 });
+
