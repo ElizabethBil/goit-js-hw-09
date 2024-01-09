@@ -49,15 +49,16 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   if (input.value.trim() && textarea.value.trim()) {
-    // Видалення даних з локального сховища
-    localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(STORAGE_KEY);
 
     input.value = '';
     textarea.value = '';
 
     console.log(object);
+    object = {};
   } else {
     alert('All fields should be filled in');
   }
+
 });
 
